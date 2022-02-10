@@ -168,12 +168,14 @@ view: interaction {
   }
 
   measure: mininsightDate {
-    sql: MIN(${TABLE}.InsightDate)
+    type: min
+    sql: ${insight_date}
     value_format: "%e %B %Y";;
   }
 
   measure: maxinsightDate {
-    sql: MAX(${TABLE}.InsightDate)
+    type: max
+    sql: ${insight_date}
     value_format: "%e %B %Y";;
   }
 
