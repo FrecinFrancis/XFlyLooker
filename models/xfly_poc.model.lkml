@@ -52,6 +52,12 @@ explore: insight {
     sql_on: ${team.country_id} = ${country.country_id} ;;
     relationship: many_to_one
   }
+
+  join: users {
+    type: left_outer
+    sql_on: ${insight.created_by} = ${users.user_id} ;;
+    relationship: one_to_one
+  }
 }
 
 
