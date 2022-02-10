@@ -169,12 +169,12 @@ view: interaction {
 
   measure: mininsightDate {
     type: min
-    sql: ${insight_date};;
+    sql: CAST(${insight_date} as Date)) ;;
   }
 
   measure: maxinsightDate {
     type: max
-    sql: ${insight_date};;
+    sql: CAST(${insight_date} as Date)) ;;
   }
 
   # ----- Sets of fields for drilling ------
