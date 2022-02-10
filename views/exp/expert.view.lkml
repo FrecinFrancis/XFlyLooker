@@ -148,14 +148,7 @@ view: expert {
       first_name,
       last_name,
       middle_name,
-      image_name,
-      expert_ol_tier_reln.count,
-      expert_team_reln.count,
-      historical_interaction_expert_reln.count,
-      interaction_associated_expert_reln.count,
-      interaction_expert_reln.count,
-      oltier_filter_value.count,
-      tmp_interaction.count
+      image_name
     ]
   }
 }

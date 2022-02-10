@@ -63,7 +63,6 @@ view: theme {
 
   dimension: team_id {
     type: number
-    # hidden: yes
     sql: ${TABLE}.TeamID ;;
   }
 
@@ -74,21 +73,6 @@ view: theme {
 
   measure: count {
     type: count
-    drill_fields: [detail*]
-  }
-
-  # ----- Sets of fields for drilling ------
-  set: detail {
-    fields: [
-      theme_id,
-      theme_name,
-      team.team_id,
-      team.team_name,
-      insight_theme_reln.count,
-      survey_question_theme_reln.count,
-      temp_tag.count,
-      theme_group_reln.count,
-      theme_team_reln.count
-    ]
+    drill_fields: [theme_id, theme_name, theme_group_reln.count, theme_team_reln.count]
   }
 }
