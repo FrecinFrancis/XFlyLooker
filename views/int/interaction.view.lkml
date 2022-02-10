@@ -168,13 +168,13 @@ view: interaction {
   }
 
   measure: mininsightDate {
-    type: min
-    sql: to_date(${insight_date} as Date) ;;
+    type: date
+    sql: MIN(${insight_date}) ;;
   }
 
   measure: maxinsightDate {
-    type: max
-    sql: to_date(${insight_date} as Date) ;;
+    type: date
+    sql: MAX(${insight_date}) ;;
   }
 
   # ----- Sets of fields for drilling ------
