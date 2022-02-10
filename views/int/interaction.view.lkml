@@ -167,6 +167,16 @@ view: interaction {
     sql: ${created_by} ;;
   }
 
+  measure: mininsightDate {
+    type: min
+    sql: ${TABLE}.InsightDate ;;
+  }
+
+  measure: maxinsightDate {
+    type: max
+    sql: ${TABLE}.InsightDate ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
