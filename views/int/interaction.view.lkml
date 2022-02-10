@@ -162,6 +162,11 @@ view: interaction {
     drill_fields: [detail*]
   }
 
+  measure: submitter_count {
+    type: count_distinct
+    sql: ${created_by} ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
