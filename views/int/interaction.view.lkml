@@ -168,13 +168,13 @@ view: interaction {
   }
 
   measure: mininsightDate {
-    sql: MIN(${TABLE}.InsightDate) ;;
-    html: {{ rendered_value | date: "%e %B %Y" }} ;;
+    sql: MIN(${TABLE}.InsightDate)
+    value_format: "%e %B %Y";;
   }
 
   measure: maxinsightDate {
-    sql: MAX(${TABLE}.InsightDate) ;;
-    html: {{ rendered_value | date: "%e %B %Y" }} ;;
+    sql: MAX(${TABLE}.InsightDate)
+    value_format: "%e %B %Y";;
   }
 
   # ----- Sets of fields for drilling ------
