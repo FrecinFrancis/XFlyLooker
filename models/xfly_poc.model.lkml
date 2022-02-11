@@ -12,7 +12,13 @@ persist_with: xfly_poc_default_datagroup
 
 explore: country {}
 
-explore: expert {}
+explore: expert {
+  join: expert_team_reln {
+    type: left_outer
+    sql_on: ${expert.expert_id} = ${expert_team_reln.expert_id} ;;
+    relationship: one_to_many
+  }
+}
 
 explore: expert_team_reln {
   join: team {
