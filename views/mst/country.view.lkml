@@ -48,6 +48,12 @@ view: country {
     sql: ${TABLE}.Longitude ;;
   }
 
+  dimension: location_map {
+    type: location
+    sql_latitude:${latitude} ;;
+    sql_longitude:${longitude} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
