@@ -37,7 +37,7 @@ explore: expert_team_reln {
 explore: insight {
   join: interaction {
     type: left_outer
-    sql_on: ${insight.interaction_id} = ${interaction.has_no_veeva_interaction_id} ;;
+    sql_on: ${insight.interaction_id} = ${interaction.interaction_id} ;;
     relationship: many_to_one
   }
 
@@ -64,7 +64,7 @@ explore: insight {
 explore: insight_country_reln {
   join: insight {
     type: left_outer
-    sql_on: ${insight_country_reln.insight_id} = ${insight.veeva_insight_id} ;;
+    sql_on: ${insight_country_reln.insight_id} = ${insight.insight_id} ;;
     relationship: many_to_one
   }
 
@@ -76,7 +76,7 @@ explore: insight_country_reln {
 
   join: interaction {
     type: left_outer
-    sql_on: ${insight.interaction_id} = ${interaction.has_no_veeva_interaction_id} ;;
+    sql_on: ${insight.interaction_id} = ${interaction.interaction_id} ;;
     relationship: many_to_one
   }
 
@@ -96,7 +96,7 @@ explore: insight_keyword_reln {
 
   join: insight {
     type: left_outer
-    sql_on: ${insight_keyword_reln.insight_id} = ${insight.veeva_insight_id} ;;
+    sql_on: ${insight_keyword_reln.insight_id} = ${insight.insight_id} ;;
     relationship: many_to_one
   }
 
@@ -114,7 +114,7 @@ explore: insight_keyword_reln {
 
   join: interaction {
     type: left_outer
-    sql_on: ${insight.interaction_id} = ${interaction.has_no_veeva_interaction_id} ;;
+    sql_on: ${insight.interaction_id} = ${interaction.interaction_id} ;;
     relationship: many_to_one
   }
 }
@@ -128,7 +128,7 @@ explore: insight_theme_reln {
 
   join: insight {
     type: left_outer
-    sql_on: ${insight_theme_reln.insight_id} = ${insight.veeva_insight_id} ;;
+    sql_on: ${insight_theme_reln.insight_id} = ${insight.insight_id} ;;
     relationship: many_to_one
   }
 
@@ -146,7 +146,7 @@ explore: insight_theme_reln {
 
   join: interaction {
     type: left_outer
-    sql_on: ${insight.interaction_id} = ${interaction.has_no_veeva_interaction_id} ;;
+    sql_on: ${insight.interaction_id} = ${interaction.interaction_id} ;;
     relationship: many_to_one
   }
 }
@@ -168,7 +168,7 @@ explore: interaction {
 explore: interaction_expert_reln {
   join: interaction {
     type: left_outer
-    sql_on: ${interaction_expert_reln.interaction_id} = ${interaction.has_no_veeva_interaction_id} ;;
+    sql_on: ${interaction_expert_reln.interaction_id} = ${interaction.interaction_id} ;;
     relationship: many_to_one
   }
 
