@@ -235,3 +235,6 @@ explore: theme {
 
 explore: users {
 }
+
+explore: insight_by_month {
+}
